@@ -1,9 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      container: {
+        padding: '14px',
+      },
+    },
+    fontFamily: {
+      logo: ['Vino Sans', 'cursive'],
+    },
   },
   plugins: [],
-}
-
+};
