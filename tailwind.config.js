@@ -11,5 +11,5 @@ export default {
       logo: ['Vino Sans', 'cursive'],
     },
   },
-  plugins: [],
+  plugins: [require('daisyui')],
 };
