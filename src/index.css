@@ -1,10 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@500&family=Raleway&family=Vina+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  html {
+    @apply bg-main font-body;
+  }
   h1 {
-    @apply text-2xl font-semibold;
+    @apply text-2xl font-semibold font-heading;
   }
 }
+
+/* Gunakan file index.css ini untuk menyimpan custom ataupun custom styling yang digunakan secara universal dan memanfaatkan classname dari tailwind.
+
+Bila ingin mengubah styling dari sebuah tag html, simpan pada @layer base
+
+Bila ingin membuat styling dari component, simpan pada @layer components
+
+Bila ingin membuat styling dari hal-hal kecil selain component dan tag html, simpan styling di @layer utilities
+
+Bila ingin membuat custom css pada component tertentu, simpan style.css pada folder yang sama dengan components tujuan.*/

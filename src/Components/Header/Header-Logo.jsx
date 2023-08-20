@@ -1,11 +1,12 @@
-export const Logo = () => {
+function Logo() {
   return (
     <>
       <a href="#">
-        <h1 className="font-logo text-red-600">
-          Buku<span className="text-blue-600">Kita</span>
+        <h1 className="font-logo text-tertiary">
+          Buku<span className="text-accent">Kita</span>
         </h1>
       </a>
     </>
   );
-};
+}
+export default Logo;
