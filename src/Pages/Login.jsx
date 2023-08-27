@@ -23,7 +23,7 @@ function Login() {
           type="password"
           placeholder="Masukkan kata sandi"
         />
-        <AuthButton tag="Daftar" type="submit" />
+        <AuthButton tag="Masuk" type="submit" />
         <AuthGoogle />
         <AuthFacebook />
       </div>

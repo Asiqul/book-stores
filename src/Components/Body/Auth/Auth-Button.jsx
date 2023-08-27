@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 function AuthButton(props) {
   const { tag, type } = props;
   return (
@@ -35,17 +37,23 @@ function AuthButton(props) {
       <div>
         {tag == 'Masuk' ? (
           <span>
-            Belum punya akun? <a href="#">Daftar</a>
+            Belum punya akun?{' '}
+            <Link
+              to="/register"
+              className="font-semibold text-tertiary hover:border-b-2 border-tertiary transition-all duration-100 ease-in"
+            >
+              Daftar
+            </Link>
           </span>
         ) : (
           <div>
             Sudah punya akun?{' '}
-            <a
-              href="#"
+            <Link
+              to="/login"
               className="font-semibold text-tertiary hover:border-b-2 border-tertiary transition-all duration-100 ease-in"
             >
               Masuk
-            </a>
+            </Link>
           </div>
         )}
       </div>
