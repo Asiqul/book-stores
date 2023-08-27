@@ -3,7 +3,7 @@ function Hamburger() {
     <div className="lg:hidden">
       <details className="dropdown ">
         <summary className="btn btn-ghost btn-circle">
-          <div className="space-y-1.5 lg:hidden">
+          <div className="space-y-1.5 lg:hidden bg-transparent">
             <div className="w-6 h-0.5 rounded-full bg-tertiary"></div>
             <div className="w-6 h-0.5 rounded-full bg-tertiary"></div>
             <div className="w-6 h-0.5 rounded-full bg-tertiary"></div>

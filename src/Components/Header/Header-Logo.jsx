@@ -1,11 +1,13 @@
+import { Link } from 'react-router-dom';
+
 function Logo() {
   return (
     <>
-      <a href="#">
+      <Link to="/">
         <h1 className="font-logo text-tertiary">
           Buku<span className="text-accent">Kita</span>
         </h1>
-      </a>
+      </Link>
     </>
   );
 }
