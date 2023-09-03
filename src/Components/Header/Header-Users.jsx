@@ -8,11 +8,11 @@ function Users() {
         <summary className="btn btn-ghost btn-circle">
           <img src={user} alt="" className="bg-transparent" />
         </summary>
-        <ul className="p-2 shadow menu dropdown-content dropdown-end z-[1] bg-base-100 rounded-box w-52">
-          <li className="my-1.5">
+        <ul className="p-2 shadow-lg menu dropdown-content dropdown-end z-[1] bg-main rounded-box w-52">
+          <li className="my-1.5 text-second hover">
             <Link to="/register">Register</Link>
           </li>
-          <li className="my-1.5">
+          <li className="my-1.5 text-second">
             <Link to="/login">Login</Link>
           </li>
         </ul>
