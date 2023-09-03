@@ -11,15 +11,9 @@ function Login() {
       <Header />
       <div className="container mx-auto my-4 md:w-1/2 xl:w-1/3">
         <AuthTitle title="Masuk" />
-        <AuthForms
-          name="email"
-          label="Email :"
-          type="email"
-          placeholder="Masukkan email"
-        />
+        <AuthForms name="email" type="email" placeholder="Masukkan email" />
         <AuthForms
           name="password"
-          label="Kata sandi :"
           type="password"
           placeholder="Masukkan kata sandi"
         />

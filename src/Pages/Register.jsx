@@ -11,21 +11,18 @@ function Register() {
         <AuthTitle title="Daftar" />
         <AuthForms
           name="fullname"
-          label="Nama Lengkap :"
           type="text"
           id="fullname"
           placeholder="Masukkan nama lengkap"
         />
         <AuthForms
           name="email"
-          label="Email :"
           type="email"
           id="email"
           placeholder="Masukkan email"
         />
         <AuthForms
           name="password"
-          label="Kata sandi :"
           type="password"
           id="password"
           placeholder="Masukkan kata sandi"

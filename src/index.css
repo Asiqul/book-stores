@@ -7,7 +7,7 @@
 
 @layer base {
   * {
-    @apply bg-main font-body;
+    @apply bg-main font-body text-[#000000];
   }
   h1 {
     @apply text-2xl font-semibold font-heading;

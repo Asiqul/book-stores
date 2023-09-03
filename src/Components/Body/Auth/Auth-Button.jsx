@@ -7,7 +7,7 @@ function AuthButton(props) {
       {tag == 'Masuk' ? (
         <a
           href="#"
-          className="font-semibold text-tertiary hover:border-b-2 border-tertiary transition-all duration-100 ease-in"
+          className="font-semibold text-tertiary border-b-2 border-transparent  hover:border-tertiary transition-all duration-100 ease-in"
         >
           Lupa kata sandi?
         </a>
@@ -30,7 +30,7 @@ function AuthButton(props) {
       )}
       <button
         type={type}
-        className="btn bg-second rounded-full font-heading text-lg font-semibold w-full text-main hover:text-second"
+        className="btn btn-ghost bg-second rounded-full font-heading text-lg font-semibold w-full text-main hover:text-second"
       >
         {tag}
       </button>
@@ -47,7 +47,7 @@ function AuthButton(props) {
           </span>
         ) : (
           <div>
-            Sudah punya akun?{' '}
+            <span>Sudah punya akun?</span>{' '}
             <Link
               to="/login"
               className="font-semibold text-tertiary hover:border-b-2 border-tertiary transition-all duration-100 ease-in"

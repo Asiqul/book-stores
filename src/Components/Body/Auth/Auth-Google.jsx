@@ -1,7 +1,7 @@
 import google from '../../../assets/icons/google.webp';
 
 function AuthGoogle(props) {
-  const { tag, type } = props;
+  const { type } = props;
 
   return (
     <div className="mt-10">
@@ -13,7 +13,7 @@ function AuthGoogle(props) {
       <div className="flex justify-center mt-5">
         <button
           type={type}
-          className="btn bg-main border border-second rounded-full font-heading text-lg font-semibold w-full text-main hover:text-second"
+          className="btn btn-ghost bg-main border border-second rounded-full font-heading text-lg font-semibold w-full text-main hover:text-second"
         >
           <img src={google} alt="" className="w-10 bg-transparent" />{' '}
           <span className="normal-case bg-transparent text-second text-sm">
