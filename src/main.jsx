@@ -6,6 +6,7 @@ import Login from './Pages/Login.jsx';
 import Register from './Pages/Register.jsx';
 import ErrorPage from './Pages/404';
 import Index from './Pages/Index';
+import Dashboard from './Pages/Dashboard';
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
     path: '/register',
     element: <Register />,
   },
+  {
+    path: '/dashboard',
+    element:  <Dashboard/>
+  }
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
