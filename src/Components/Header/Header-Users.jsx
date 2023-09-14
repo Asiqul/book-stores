@@ -10,10 +10,10 @@ function Users() {
         </summary>
         <ul className="p-2 shadow-lg menu dropdown-content dropdown-end z-[1] bg-main rounded-box w-52">
           <li className="my-1.5 text-second hover">
-            <Link to="/register">Register</Link>
+            <Link to="/register">Daftar</Link>
           </li>
           <li className="my-1.5 text-second">
-            <Link to="/login">Login</Link>
+            <Link to="/login">Masuk</Link>
           </li>
         </ul>
       </details>
