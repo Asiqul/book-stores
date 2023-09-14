@@ -1,11 +1,13 @@
+/* eslint-disable react/prop-types */
 import facebook from '../../../assets/icons/facebook.webp';
 
 function AuthFacebook(props) {
   const { type } = props;
+  const buttonType = type === 'masuk' ? 'Masuk' : 'Daftar';
 
   return (
     <div className="mt-6">
-      <div className="flex justify-center items-center gap-2">
+      <div className="flex justify-center items-center gap-2 -z-">
         <span className=" w-1/3 h-[1.5px] bg-border opacity-40"></span>
         <span className="text-sm text-border font-semibold italic">
           Akun lainnya
@@ -19,7 +21,7 @@ function AuthFacebook(props) {
         >
           <img src={facebook} alt="" className="w-6 bg-transparent" />{' '}
           <span className="normal-case bg-transparent text-second text-sm ml-2">
-            Masuk dengan akun Facebook
+            {buttonType} dengan akun Facebook
           </span>
         </button>
       </div>

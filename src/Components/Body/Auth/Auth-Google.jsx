@@ -1,7 +1,9 @@
+/* eslint-disable react/prop-types */
 import google from '../../../assets/icons/google.webp';
 
 function AuthGoogle(props) {
   const { type } = props;
+  const buttonType = type === 'masuk' ? 'Masuk' : 'Daftar';
 
   return (
     <div className="mt-10">
@@ -17,7 +19,7 @@ function AuthGoogle(props) {
         >
           <img src={google} alt="" className="w-10 bg-transparent" />{' '}
           <span className="normal-case bg-transparent text-second text-sm">
-            Masuk dengan akun Google
+            {buttonType} dengan akun Google
           </span>
         </button>
       </div>

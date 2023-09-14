@@ -25,6 +25,7 @@ export default {
       body: ['Inter', 'sans-serif'],
     },
   },
+  // eslint-disable-next-line no-undef
   plugins: [require('daisyui')],
 
   daisyui: {

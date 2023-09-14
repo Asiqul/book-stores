@@ -9,7 +9,7 @@ function Login() {
   return (
     <>
       <Header />
-      <div className="container mx-auto my-4 md:w-1/2 xl:w-1/3">
+      <div className="container mx-auto my-4 md:w-1/2 xl:w-1/3 min-h-screen">
         <AuthTitle title="Masuk" />
         <AuthForms name="email" type="email" placeholder="Masukkan email" />
         <AuthForms
@@ -18,8 +18,8 @@ function Login() {
           placeholder="Masukkan kata sandi"
         />
         <AuthButton tag="Masuk" type="submit" />
-        <AuthGoogle />
-        <AuthFacebook />
+        <AuthGoogle type="masuk" />
+        <AuthFacebook type="masuk" />
       </div>
     </>
   );

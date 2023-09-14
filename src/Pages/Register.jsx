@@ -1,5 +1,7 @@
 import AuthButton from '../Components/Body/Auth/Auth-Button';
+import AuthFacebook from '../Components/Body/Auth/Auth-Facebook';
 import AuthForms from '../Components/Body/Auth/Auth-Forms';
+import AuthGoogle from '../Components/Body/Auth/Auth-Google';
 import AuthTitle from '../Components/Body/Auth/Auth-Title';
 import Header from '../Fragments/Header';
 
@@ -28,6 +30,8 @@ function Register() {
           placeholder="Masukkan kata sandi"
         />
         <AuthButton tag="Daftar" type="submit" />
+        <AuthGoogle type="daftar" />
+        <AuthFacebook type="daftar" />
       </div>
     </>
   );
