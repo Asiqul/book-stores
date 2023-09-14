@@ -15,6 +15,9 @@ export default {
       container: {
         padding: '14px',
       },
+      boxShadow: {
+        'custom': '0 0 10px rgba(229,229,229,.8)',
+      }
     },
     fontFamily: {
       logo: ['Vino Sans', 'cursive'],
