@@ -7,7 +7,6 @@ import Register from './Pages/Register.jsx';
 import ErrorPage from './Pages/404';
 import Index from './Pages/Index';
 import Dashboard from './Pages/Dashboard';
-
 import Checkout from './Pages/Checkout';
 
 
@@ -29,7 +28,7 @@ const router = createBrowserRouter([
     path: '/dashboard',
     element:  <Dashboard/>
   }
-
+  {
     path: '/checkout',
     element: <Checkout />,
   },
