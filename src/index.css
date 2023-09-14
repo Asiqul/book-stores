@@ -10,7 +10,14 @@
     @apply bg-main font-body text-[#000000];
   }
   h1 {
-    @apply text-2xl font-semibold font-heading;
+    @apply text-2xl font-semibold font-heading bg-transparent;
+  }
+  h2,
+  h3,
+  h4,
+  h5,
+  p {
+    @apply bg-transparent;
   }
 }
 
