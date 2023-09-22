@@ -3,7 +3,7 @@ import { FaLocationDot } from 'react-icons/fa6';
 import { IconContext } from 'react-icons';
 import { createPortal } from 'react-dom';
 import { useState } from 'react';
-import Address from '../Pop-up/Address';
+import Address from '../Components/Body/Pop-up/Address-Modal';
 
 function StoreCard(props) {
   const { isOpen, onClick } = props;

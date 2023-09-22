@@ -7,21 +7,23 @@ import HeaderLogin from '../Components/Header/Header-Login';
 
 function Navbar() {
   return (
-    <div className="container mx-auto h-32 lg:h-20 lg:py-3 drop-shadow-md border-b-2 border-border border-opacity-30">
-      <div className="flex justify-between items-center">
-        <Hamburger />
-        <Logo />
-        <HeaderCategory />
-        <div className="hidden lg:block w-1/2">
+    <nav className=" drop-shadow-md border-b-2 border-border border-opacity-30 flex fixed top-0 w-full justify-center items-cente z-50">
+      <div className="container mx-auto h-32 lg:h-20 lg:py-3">
+        <div className="flex justify-between items-center">
+          <Hamburger />
+          <Logo />
+          <HeaderCategory />
+          <div className="hidden lg:block w-1/2">
+            <SearchBar />
+          </div>
+          <Users />
+          <HeaderLogin />
+        </div>
+        <div className="lg:container lg:hidden pt-3">
           <SearchBar />
         </div>
-        <Users />
-        <HeaderLogin />
       </div>
-      <div className="lg:container lg:hidden pt-3">
-        <SearchBar />
-      </div>
-    </div>
+    </nav>
   );
 }
 
