@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import AuthTitle from '../Components/Body/Auth/Auth-Title';
-import StoreCard from '../Components/Body/Stores/Store-Card';
+import StoreCard from '../Fragments/Store-Card';
 import StoreDetail from '../Components/Body/Stores/Store-Detail';
 import StorePayment from '../Components/Body/Stores/Store-Payment';
 import Header from '../Fragments/Header';

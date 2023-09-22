@@ -1,20 +1,28 @@
 function Forms(props) {
-  const { type, placeholder, id, label, pattern } = props;
+  const { type, placeholder, id, label, pattern, opt, value, disable } = props;
   return (
-    <div className="bg-transparent my-1">
+    <div
+      className={`bg-transparent my-1 border-b-[1px] border-border ${
+        disable ? 'opacity-75' : 'border-opacity-80'
+      }`}
+    >
       <label
         htmlFor={id}
-        className="text-xs mb-6 bg-transparent font-heading font-semibold after:content-['*'] after:text-[#FF0000] after:ml-0.5"
+        className={`text-xs bg-transparent font-heading font-semibold ${
+          opt ? 'after:content-[' * '] after:text-[#FF0000] after:ml-0.5' : ''
+        }`}
       >
         {label}
       </label>
       <input
+        className="w-full py-1 mt-1 bg-transparent text-sm"
         id={id}
         type={type}
+        value={value}
         placeholder={placeholder}
-        className="w-full py-1 bg-transparent text-sm"
         pattern={pattern}
-        required
+        required={opt}
+        disabled={disable}
       />
     </div>
   );
