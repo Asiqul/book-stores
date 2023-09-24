@@ -1,44 +1,43 @@
 import React from 'react';
-import ReactDOM from "react-dom/client";
-import "./index.css";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Login from "./Pages/Login";
-import Register from "./Pages/Register";
-import ErrorPage from "./Pages/404";
-import Index from "./Pages/Index";
-import Dashboard from "./Pages/Dashboard";
-import Checkout from "./Pages/Checkout";
-import ProductDetail from "./Pages/Product-Detail";
-
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Login from './Pages/Login';
+import Register from './Pages/Register';
+import ErrorPage from './Pages/404';
+import Index from './Pages/Index';
+import Dashboard from './Pages/Dashboard';
+import Checkout from './Pages/Checkout';
+import ProductDetail from './Pages/Product-Detail';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <Index />,
     errorElement: <ErrorPage />,
   },
   {
-    path: "/login",
+    path: '/login',
     element: <Login />,
   },
   {
-    path: "/register",
+    path: '/register',
     element: <Register />,
   },
   {
-    path: "/dashboard",
+    path: '/dashboard',
     element: <Dashboard />,
   },
   {
-    path: "/checkout",
+    path: '/checkout',
     element: <Checkout />,
   },
   {
-    path: "/product-detail",
+    path: '/product-detail',
     element: <ProductDetail />,
   },
 ]);
-ReactDOM.createRoot(document.getElementById("root")).render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router={router} />
   </React.StrictMode>

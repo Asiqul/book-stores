@@ -1,32 +1,14 @@
-.container-readmore,
-.container-detailbook,
-.body-product {
-  animation: transitionIn 0.75s;
-}
-
-@keyframes transitionIn {
-  from {
-    opacity: 0;
-    transform: rotateY(-10deg);
-  }
-
-  to {
-    opacity: 100;
-    transform: rotateY(0deg);
-  }
-}
-
 .text {
-  background: white;
-  display: inline;
-  width: 100%;
+    background: white;
+    display: inline;
+    width: 100%;
 }
 
 .read-or-hide {
-  background: white;
-  font-weight: 700;
-  color: #439a97;
-  cursor: pointer;
+    background: white;
+    font-weight: 700;
+    color: #439a97;
+    cursor: pointer;
 }
 
 .container-detailbook,
@@ -40,5 +22,5 @@
 .width-book,
 .languange-book,
 .length-book {
-  background-color: white;
+    background-color: white;
 }
