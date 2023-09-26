@@ -1,3 +1,9 @@
+import propTypes from 'prop-types';
+
+StoreDetail.propTypes = {
+    isOpen: propTypes.bool,
+};
+
 function StoreDetail(props) {
     const isOpen = props.isOpen;
     return (

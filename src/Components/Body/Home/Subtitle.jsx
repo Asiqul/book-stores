@@ -1,3 +1,9 @@
+import propTypes from 'prop-types';
+
+Subtitle.propTypes = {
+    title: propTypes.string,
+};
+
 function Subtitle(props) {
     const { title } = props;
     return (

@@ -1,4 +1,9 @@
 import { useState } from 'react';
+import propTypes from 'prop-types';
+
+Descbook.propTypes = {
+    children: propTypes.node,
+};
 
 function Descbook({ children }) {
     const text = children;

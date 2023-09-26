@@ -7,23 +7,23 @@ import Layout from '../Fragments/Layout';
 import { ProfileProvider } from '../context/profile-context';
 
 function Dashboard() {
-  return (
-    <>
-      <ProfileProvider>
-        <Layout>
-          <div className="container mx-auto  md:flex md:flex-row-reverse justify-between gap-4 min-h-screen">
-            <div className="mt-40 md:mt-36 lg:mt-32 md:w-full">
-              <NavButton />
-              <UserProfile />
-              <AddressList />
-              <OrderList />
-            </div>
-            <StickyNav />
-          </div>
-        </Layout>
-      </ProfileProvider>
-    </>
-  );
+    return (
+        <>
+            <ProfileProvider>
+                <Layout>
+                    <div className="container mx-auto  md:flex md:flex-row-reverse justify-between gap-4 min-h-screen">
+                        <div className="mt-40 md:mt-36 lg:mt-32 md:w-full">
+                            <NavButton />
+                            <UserProfile />
+                            <AddressList />
+                            <OrderList />
+                        </div>
+                        <StickyNav />
+                    </div>
+                </Layout>
+            </ProfileProvider>
+        </>
+    );
 }
 
 export default Dashboard;

@@ -1,4 +1,9 @@
-import React, { createContext, useState } from 'react';
+import { createContext, useState } from 'react';
+import propTypes from 'prop-types';
+
+ProductProvider.propTypes = {
+    children: propTypes.node,
+};
 
 const ProductContext = createContext('Description');
 
