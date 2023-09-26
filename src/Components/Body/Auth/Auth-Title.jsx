@@ -1,9 +1,5 @@
 import propTypes from 'prop-types';
 
-AuthTitle.propTypes = {
-    title: propTypes.string,
-};
-
 function AuthTitle(props) {
     const { title } = props;
     return (
@@ -12,4 +8,8 @@ function AuthTitle(props) {
         </div>
     );
 }
+
+AuthTitle.propTypes = {
+    title: propTypes.string,
+};
 export default AuthTitle;

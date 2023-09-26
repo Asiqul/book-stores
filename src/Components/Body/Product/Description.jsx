@@ -1,10 +1,6 @@
 import { useState } from 'react';
 import propTypes from 'prop-types';
 
-Descbook.propTypes = {
-    children: propTypes.node,
-};
-
 function Descbook({ children }) {
     const text = children;
     const [isReadMore, setIsReadMore] = useState(true);
@@ -28,6 +24,9 @@ function Descbook({ children }) {
     );
 }
 
+Descbook.propTypes = {
+    children: propTypes.node,
+};
 function Description() {
     return (
         <div className="bg-white text-justify">

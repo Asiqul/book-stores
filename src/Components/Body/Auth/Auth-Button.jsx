@@ -1,11 +1,6 @@
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-AuthButton.propTypes = {
-    tag: PropTypes.string,
-    type: PropTypes.string,
-};
-
 function AuthButton(props) {
     const { tag, type } = props;
     return (
@@ -64,4 +59,8 @@ function AuthButton(props) {
     );
 }
 
+AuthButton.propTypes = {
+    tag: PropTypes.string,
+    type: PropTypes.string,
+};
 export default AuthButton;

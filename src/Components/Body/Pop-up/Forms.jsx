@@ -1,16 +1,5 @@
 import propTypes from 'prop-types';
 
-Forms.propTypes = {
-    type: propTypes.string,
-    placeholder: propTypes.string,
-    id: propTypes.string,
-    label: propTypes.string,
-    pattern: propTypes.string,
-    opt: propTypes.bool,
-    value: propTypes.string,
-    disable: propTypes.bool,
-};
-
 function Forms(props) {
     const { type, placeholder, id, label, pattern, opt, value, disable } = props;
     return (
@@ -41,4 +30,14 @@ function Forms(props) {
     );
 }
 
+Forms.propTypes = {
+    type: propTypes.string,
+    placeholder: propTypes.string,
+    id: propTypes.string,
+    label: propTypes.string,
+    pattern: propTypes.string,
+    opt: propTypes.bool,
+    value: propTypes.string,
+    disable: propTypes.bool,
+};
 export default Forms;

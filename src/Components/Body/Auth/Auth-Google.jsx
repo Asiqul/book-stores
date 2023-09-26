@@ -1,10 +1,6 @@
 import google from '../../../assets/icons/google.webp';
 import propTypes from 'prop-types';
 
-AuthGoogle.propTypes = {
-    type: propTypes.string,
-};
-
 function AuthGoogle(props) {
     const { type } = props;
     const buttonType = type === 'masuk' ? 'Masuk' : 'Daftar';
@@ -31,4 +27,7 @@ function AuthGoogle(props) {
     );
 }
 
+AuthGoogle.propTypes = {
+    type: propTypes.string,
+};
 export default AuthGoogle;

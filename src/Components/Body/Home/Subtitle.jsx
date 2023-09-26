@@ -1,9 +1,5 @@
 import propTypes from 'prop-types';
 
-Subtitle.propTypes = {
-    title: propTypes.string,
-};
-
 function Subtitle(props) {
     const { title } = props;
     return (
@@ -15,4 +11,7 @@ function Subtitle(props) {
     );
 }
 
+Subtitle.propTypes = {
+    title: propTypes.string,
+};
 export default Subtitle;
