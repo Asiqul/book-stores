@@ -1,9 +1,5 @@
 import propTypes from 'prop-types';
 
-StorePayment.propTypes = {
-    isOpen: propTypes.bool,
-};
-
 function StorePayment(props) {
     const isOpen = props.isOpen;
     return (
@@ -28,4 +24,7 @@ function StorePayment(props) {
     );
 }
 
+StorePayment.propTypes = {
+    isOpen: propTypes.bool,
+};
 export default StorePayment;

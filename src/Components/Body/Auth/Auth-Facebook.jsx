@@ -1,10 +1,6 @@
 import facebook from '../../../assets/icons/facebook.webp';
 import PropTypes from 'prop-types';
 
-AuthFacebook.propTypes = {
-    type: PropTypes.string,
-};
-
 function AuthFacebook(props) {
     const { type } = props;
     const buttonType = type === 'masuk' ? 'Masuk' : 'Daftar';
@@ -31,4 +27,7 @@ function AuthFacebook(props) {
     );
 }
 
+AuthFacebook.propTypes = {
+    type: PropTypes.string,
+};
 export default AuthFacebook;

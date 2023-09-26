@@ -1,12 +1,5 @@
 import propTypes from 'prop-types';
 
-AuthForms.propTypes = {
-    name: propTypes.string,
-    type: propTypes.string,
-    placeholder: propTypes.string,
-    id: propTypes.string,
-};
-
 function AuthForms(props) {
     const { name, type, placeholder, id } = props;
     return (
@@ -23,4 +16,10 @@ function AuthForms(props) {
     );
 }
 
+AuthForms.propTypes = {
+    name: propTypes.string,
+    type: propTypes.string,
+    placeholder: propTypes.string,
+    id: propTypes.string,
+};
 export default AuthForms;
