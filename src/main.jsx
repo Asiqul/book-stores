@@ -11,34 +11,34 @@ import Checkout from './Pages/Checkout';
 import ProductDetail from './Pages/Product-Detail';
 
 const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <Index />,
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: '/login',
-    element: <Login />,
-  },
-  {
-    path: '/register',
-    element: <Register />,
-  },
-  {
-    path: '/dashboard',
-    element: <Dashboard />,
-  },
-  {
-    path: '/checkout',
-    element: <Checkout />,
-  },
-  {
-    path: '/product-detail',
-    element: <ProductDetail />,
-  },
+    {
+        path: '/',
+        element: <Index />,
+        errorElement: <ErrorPage />,
+    },
+    {
+        path: '/login',
+        element: <Login />,
+    },
+    {
+        path: '/register',
+        element: <Register />,
+    },
+    {
+        path: '/dashboard',
+        element: <Dashboard />,
+    },
+    {
+        path: '/checkout',
+        element: <Checkout />,
+    },
+    {
+        path: '/product-detail',
+        element: <ProductDetail />,
+    },
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>
+    <React.StrictMode>
+        <RouterProvider router={router} />
+    </React.StrictMode>
 );

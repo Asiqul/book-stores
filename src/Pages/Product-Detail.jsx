@@ -2,7 +2,6 @@ import Layout from '../Fragments/Layout';
 import ImageCard from '../Components/Body/Product/Image-Card';
 import BookDetail from '../Fragments/Book-Detail';
 import { ProductProvider } from '../context/product-context';
-import PaymentSummary from '../Components/Body/Stores/Payment-Summary';
 import CheckoutCard from '../Components/Body/Product/Checkout-Card';
 
 function ProductDetail() {
