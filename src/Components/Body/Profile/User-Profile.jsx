@@ -1,6 +1,6 @@
-import Forms from '../Pop-up/Forms';
-import ProfileContext from '../../../context/profile-context';
-import { useContext } from 'react';
+import Forms from "../Pop-up/Forms";
+import ProfileContext from "../../../context/profile-context";
+import { useContext } from "react";
 
 function UserProfile() {
     const { isActive } = useContext(ProfileContext);

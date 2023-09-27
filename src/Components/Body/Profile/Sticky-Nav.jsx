@@ -1,5 +1,5 @@
-import ProfileContext from '../../../context/profile-context';
-import { useContext } from 'react';
+import ProfileContext from "../../../context/profile-context";
+import { useContext } from "react";
 
 function StickyNav() {
     const { isActive, setIsActive } = useContext(ProfileContext);
