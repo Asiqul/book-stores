@@ -63,9 +63,9 @@ function CheckoutCard() {
                     </div>
                 </div>
             </div>
-            <div className="fixed bottom-0 bg-white border-t-2 border-border border-opacity-50 lg:hidden w-full py-2 z-50">
+            <div className="fixed bottom-0 bg-white border-t-2 border-border border-opacity-50 lg:hidden w-full z-50">
                 <div className="container mx-auto flex flex-col bg-transparent items-center">
-                    <div className="bg-transparent w-full flex justify-between items-center py-4 border-b-2 border-border border-opacity-50">
+                    <div className="bg-transparent w-full flex justify-between items-center py-1.5 border-b-2 border-border border-opacity-50">
                         <h2 className="font-semibold">Jumlah Barang</h2>
                         <div className="bg-transparent flex mt-1 items-center">
                             <button className="bg-transparent rounded-full" onClick={handleDecrease}>

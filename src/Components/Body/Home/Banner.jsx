@@ -15,10 +15,10 @@ function Banner() {
                 }}
                 slidesPerView={1}
                 autoplay={{
-                    delay: 2500,
+                    delay: 4500,
                     disableOnInteraction: false,
                 }}
-                className="w-full h-full"
+                className="w-full h-full cursor-pointer active:cursor-grabbing"
             >
                 <SwiperSlide className="swiper-slide">
                     <img

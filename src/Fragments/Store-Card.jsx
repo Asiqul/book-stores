@@ -6,11 +6,6 @@ import { useState } from 'react';
 import Address from '../Components/Body/Pop-up/Address-Modal';
 import propTypes from 'prop-types';
 
-StoreCard.propTypes = {
-    onClick: propTypes.func,
-    isOpen: propTypes.bool,
-};
-
 function StoreCard(props) {
     const { isOpen, onClick } = props;
     const [isOpenAddress, setIsOpenAddress] = useState(false);
@@ -70,4 +65,8 @@ function StoreCard(props) {
     );
 }
 
+StoreCard.propTypes = {
+    onClick: propTypes.func,
+    isOpen: propTypes.bool,
+};
 export default StoreCard;
