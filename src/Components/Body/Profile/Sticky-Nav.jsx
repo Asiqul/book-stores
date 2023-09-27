@@ -1,5 +1,5 @@
-import ProfileContext from '../../../context/profile-context';
-import { useContext } from 'react';
+import ProfileContext from "../../../context/profile-context";
+import { useContext } from "react";
 
 function StickyNav() {
   const { isActive, setIsActive } = useContext(ProfileContext);
@@ -10,8 +10,12 @@ function StickyNav() {
           <li className="p-3 text-lg">
             <button
               href="/my-order"
-              className={`${isActive === 'order-list' ? 'text-tertiary btn-ghost' : 'btn-ghost'} btn`}
-              onClick={() => setIsActive('order-list')}
+              className={`${
+                isActive === "order-list"
+                  ? "text-tertiary btn-ghost"
+                  : "btn-ghost"
+              } btn`}
+              onClick={() => setIsActive("order-list")}
             >
               Pesanan Saya
             </button>
@@ -20,15 +24,20 @@ function StickyNav() {
             <button
               href="/my-account"
               className={`${
-                isActive === 'profile' || isActive === 'address' ? 'text-tertiary btn-ghost' : 'btn-ghost'
+                isActive === "profile" || isActive === "address"
+                  ? "text-tertiary btn-ghost"
+                  : "btn-ghost"
               } btn`}
-              onClick={() => setIsActive('profile')}
+              onClick={() => setIsActive("profile")}
             >
               Akun Saya
             </button>
           </li>
           <li className="p-3 text-lg mt-6 bg-transparent">
-            <button href="/my-account" className="btn btn-ghost hover:btn-error">
+            <button
+              href="/my-account"
+              className="btn btn-ghost hover:btn-error"
+            >
               Keluar
             </button>
           </li>
