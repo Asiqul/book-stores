@@ -5,9 +5,10 @@ import 'swiper/css/navigation';
 import './Styles/style.css';
 import Card from './Card';
 
-function SwiperCard({ books }) {
+function SwiperCardCategory({ books, children }) {
     return (
-        <div className="lg:mt-1 h-[370px] py-3 px-2 sm:px-4 md:px-6 bg-transparent bg-opacity-50 rounded-xl -z-10 w-full">
+        <div className="lg:mt-1 h-[370px] py-3 px-2 sm:px-4 md:px-6 bg-transparent bg-opacity-50 -z-10 w-full flex flex-row">
+            <div className="bg-transparent rounded-lg mr-5 hidden xl:block">{children}</div>
             <Swiper
                 style={{
                     '--swiper-navigation-color': '#439A97',
@@ -36,10 +37,10 @@ function SwiperCard({ books }) {
                         slidesPerView: 4.5,
                     },
                     1280: {
-                        slidesPerView: 5.5,
+                        slidesPerView: 4.5,
                     },
                     1536: {
-                        slidesPerView: 6.5,
+                        slidesPerView: 5.5,
                     },
                 }}
                 className="w-full h-full cursor-grab active:cursor-grabbing"
@@ -57,7 +58,8 @@ function SwiperCard({ books }) {
     );
 }
 
-SwiperCard.propTypes = {
+SwiperCardCategory.propTypes = {
     books: propTypes.array,
+    children: propTypes.node,
 };
-export default SwiperCard;
+export default SwiperCardCategory;

@@ -1,35 +1,21 @@
-import Banner from "../Components/Body/Home/Banner";
-import Blog from "../Components/Body/Home/Blog";
-import Brand from "../Components/Body/Home/Brand";
-import Footer from "../Components/Body/Home/Footer";
-import Gmail from "../Components/Body/Home/Gmail";
-import Navbar from "../Fragments/Navbar";
-import Recomendations from "../Fragments/Recomendations";
+import Banner from '../Components/Body/Home/Banner';
+import Navbar from '../Fragments/Navbar';
+import Recomendations from '../Fragments/Books/Recomendations';
+import Populars from '../Fragments/Books/Populars';
+import Favourites from '../Fragments/Books/Favourites';
+import International from '../Fragments/Books/International';
 
 function Index() {
-  return (
-    <>
-      <Navbar />
-      <div>
-        <Banner />
-      </div>
-      <div>
-        <Recomendations />
-      </div>
-      <div>
-        <Brand />
-      </div>
-      <div>
-        <Blog />
-      </div>
-      <div>
-        <Gmail />
-      </div>
-      <div>
-        <Footer />
-      </div>
-    </>
-  );
+    return (
+        <>
+            <Navbar />
+            <Banner />
+            <Recomendations />
+            <Populars />
+            <Favourites />
+            <International />
+        </>
+    );
 }
 
 export default Index;
