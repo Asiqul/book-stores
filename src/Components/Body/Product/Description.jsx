@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import propTypes from 'prop-types';
 
 function Descbook({ children }) {
     const text = children;
@@ -23,6 +24,9 @@ function Descbook({ children }) {
     );
 }
 
+Descbook.propTypes = {
+    children: propTypes.node,
+};
 function Description() {
     return (
         <div className="bg-white text-justify">

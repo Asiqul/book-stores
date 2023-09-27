@@ -1,3 +1,5 @@
+import propTypes from 'prop-types';
+
 function StoreDetail(props) {
     const isOpen = props.isOpen;
     return (
@@ -19,4 +21,7 @@ function StoreDetail(props) {
     );
 }
 
+StoreDetail.propTypes = {
+    isOpen: propTypes.bool,
+};
 export default StoreDetail;
