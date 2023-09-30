@@ -5,14 +5,16 @@ import SwiperCardCategory from '../../Components/Body/Home/Swiper-Card-Category'
 
 function Populars() {
     return (
-        <div className="">
-            <Subtitle title="Buku-Buku Populer" />
-            <div className="container mx-auto">
-                <SwiperCardCategory books={books}>
-                    <BannerCategory image="./public/banner/buku-populer.png" alt="Populars" />
-                </SwiperCardCategory>
+        <>
+            <div className="mt-8 lg:mt-12 container mx-auto">
+                <Subtitle title="Buku-Buku Populer" expand={true} />
+                <div>
+                    <SwiperCardCategory books={books}>
+                        <BannerCategory image="./public/banner/buku-populer.png" alt="Populars" />
+                    </SwiperCardCategory>
+                </div>
             </div>
-        </div>
+        </>
     );
 }
 

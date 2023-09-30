@@ -5,14 +5,16 @@ import SwiperCardCategory from '../../Components/Body/Home/Swiper-Card-Category'
 
 function Favourites() {
     return (
-        <div className="">
-            <Subtitle title="Fiksi Terlaris" />
-            <div className="container mx-auto">
-                <SwiperCardCategory books={books}>
-                    <BannerCategory image="./public/banner/fiksi-favorit.png" alt="Populars" />
-                </SwiperCardCategory>
+        <>
+            <div className="mt-8 lg:mt-12 container mx-auto">
+                <Subtitle title="Fiksi Terlaris" expand={true} />
+                <div>
+                    <SwiperCardCategory books={books}>
+                        <BannerCategory image="./public/banner/fiksi-favorit.png" alt="Populars" />
+                    </SwiperCardCategory>
+                </div>
             </div>
-        </div>
+        </>
     );
 }
 

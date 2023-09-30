@@ -1,10 +1,10 @@
-import ProfileContext from "../../../context/profile-context";
-import { useContext } from "react";
+import ProfileContext from '../../../Utils/Context/profile-context';
+import { useContext } from 'react';
 
 function StickyNav() {
     const { isActive, setIsActive } = useContext(ProfileContext);
     return (
-        <div className="card w-1/2 max-w-xs max-h-32 shadow-custom inset-3 sticky lg:top-32 md:top-36 hidden md:block">
+        <div className="card w-1/2 max-w-xs max-h-72 shadow-custom inset-3 sticky lg:top-32 md:top-36 hidden md:block">
             <div className="card-body rounded-xl">
                 <ul className="my-2">
                     <li className="p-3 text-lg">

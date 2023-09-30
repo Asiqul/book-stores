@@ -5,7 +5,6 @@ import Favourites from '../Fragments/Books/Favourites';
 import International from '../Fragments/Books/International';
 import Brand from '../Components/Body/Home/Brand';
 import Blog from '../Components/Body/Home/Blog';
-import Gmail from '../Components/Body/Home/Gmail';
 import Layout from '../Fragments/Layout';
 
 function Index() {
@@ -19,7 +18,6 @@ function Index() {
                 <International />
                 <Brand />
                 <Blog />
-                <Gmail />
             </Layout>
         </>
     );

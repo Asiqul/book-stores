@@ -1,4 +1,4 @@
-import ProfileContext from '../../../context/profile-context';
+import ProfileContext from '../../../Utils/Context/profile-context';
 import { useContext } from 'react';
 import emptyOrder from '../../../assets/icons/empty-order.png';
 

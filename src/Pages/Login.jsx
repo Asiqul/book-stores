@@ -4,8 +4,10 @@ import AuthForms from '../Components/Body/Auth/Auth-Forms';
 import AuthGoogle from '../Components/Body/Auth/Auth-Google';
 import AuthTitle from '../Components/Body/Auth/Auth-Title';
 import Header from '../Fragments/Header';
+import useTitle from '../Utils/Hooks/useTitle';
 
 function Login() {
+    useTitle('Masuk');
     return (
         <>
             <Header />

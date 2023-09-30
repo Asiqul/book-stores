@@ -1,12 +1,14 @@
 import Navbar from './Navbar';
-import Footer from '../Components/Body/Home/Footer';
+import Footer from './Footer';
 import propTypes from 'prop-types';
+import Gmail from '../Components/Body/Home/Gmail';
 
 function Layout({ children }) {
     return (
-        <div className="min-h-screen">
+        <div className="min-h-screen relative">
             <Navbar />
             {children}
+            <Gmail />
             <Footer />
         </div>
     );
