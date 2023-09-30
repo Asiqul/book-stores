@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import ProfileContext from '../../../context/profile-context';
+import ProfileContext from '../../../Utils/Context/profile-context';
 
 function NavButton() {
     const { isActive, setIsActive } = useContext(ProfileContext);

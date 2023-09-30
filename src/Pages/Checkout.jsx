@@ -5,8 +5,10 @@ import StoreDetail from '../Components/Body/Stores/Store-Detail';
 import StorePayment from '../Components/Body/Stores/Store-Payment';
 import Header from '../Fragments/Header';
 import PaymentSummary from '../Components/Body/Stores/Payment-Summary';
+import useTitle from '../Utils/Hooks/useTitle';
 
 function Checkout() {
+    useTitle('Checkout');
     const [isOpen, setIsOpen] = useState(false);
     return (
         <>

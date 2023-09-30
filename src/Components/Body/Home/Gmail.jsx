@@ -1,21 +1,33 @@
-import Subtitle from "./Subtitle";
+import Subtitle from './Subtitle';
 
 const Gmail = () => {
-  return (
-    <div>
-      <div className="mt-12 py-12 mx-auto bg-second justify-around flex items-center">
-        <Subtitle title="Kejutan spesial dari kami hanya untukmu" />
-        <div className="mt-4">
-          <input
-            type="email"
-            placeholder="Masukkan Email Anda Disini..."
-            className="p-4 w-[450px] rounded-l"
-          />
-          <button className="bg-cards py-4 px-8 rounded-r">Daftar</button>
-        </div>
-      </div>
-    </div>
-  );
+    return (
+        <>
+            <div className="mt-6 py-8 lg:py-11 bg-cards">
+                <div className="container mx-auto flex flex-col lg:flex-row gap-6 lg:gap-4 justify-center items-center">
+                    <div className="lg:w-1/2 flex text-center justify-center lg:justify-normal items-center w-full">
+                        <Subtitle title="Kejutan spesial dari kami hanya untukmu" />
+                    </div>
+                    <div className="flex flex-row w-full lg:w-1/2 justify-center">
+                        <div className="relative w-full">
+                            <input
+                                id="email"
+                                type="email"
+                                placeholder="Masukkan Email Anda Disini..."
+                                className="p-4 w-full rounded-lg rounded-r-xl bg-white text-sm outline-none"
+                            />
+                            <button
+                                id="email"
+                                className="bg-second rounded-l-none py-3.5 px-6 lg:px-10 rounded-r-lg absolute right-0 hover:bg-tertiary transition duration-200 ease-in font-semibold text-white"
+                            >
+                                Daftar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </>
+    );
 };
 
 export default Gmail;

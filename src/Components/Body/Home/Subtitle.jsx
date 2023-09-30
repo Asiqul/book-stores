@@ -1,14 +1,16 @@
 import propTypes from 'prop-types';
 
 function Subtitle(props) {
-    const { title } = props;
+    const { title, expand } = props;
     return (
         <>
-            <div className="container mx-auto mt-8 lg:mt-11 flex justify-between">
+            <div className="flex justify-between items-center">
                 <h1 className="text-xl lg:text-2xl">{title}</h1>
                 <a
                     href="#"
-                    className="text-sm lg:text-base font-semibold text-tertiary hover:text-second transition duration-200 ease-in"
+                    className={`${
+                        expand ? 'block' : 'hidden'
+                    } text-sm lg:text-base font-semibold text-tertiary hover:text-second transition duration-200 ease-in`}
                 >
                     Lihat Semua
                 </a>
@@ -19,5 +21,6 @@ function Subtitle(props) {
 
 Subtitle.propTypes = {
     title: propTypes.string,
+    expand: propTypes.bool,
 };
 export default Subtitle;

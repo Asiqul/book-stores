@@ -1,21 +1,24 @@
-import Subtitle from "./Subtitle";
+import Subtitle from './Subtitle';
+import { brands } from '../../../../public/brand/brands';
 
 const Brand = () => {
-  return (
-    <div className="container mx-auto">
-      <div className="my-6">
-        <Subtitle title="Brand Pilihan" />
-      </div>
-      <div className="gap-4 grid grid-cols-6">
-        <img className="object-contain border w-full h-[100px] shadow-md" src="./public/brand/brand1.png"alt="brand" />
-        <img className="object-contain border w-full h-[100px] shadow-md" src="./public/brand/brand2.png"  alt="brand" />
-        <img className="object-contain border w-full h-[100px] shadow-md" src="./public/brand/brand3.png" alt="brand" />
-        <img className="object-contain border w-full h-[100px] shadow-md" src="./public/brand/brand4.png" alt="brand" />
-        <img className="object-contain border w-full h-[100px] shadow-md" src="./public/brand/brand5.jpeg" alt="brand"/>
-        <img className="object-contain border w-full h-[100px] shadow-md" src="./public/brand/brand6.png" alt="brand" />
-      </div>
-    </div>
-  );
+    return (
+        <>
+            <div className="my-6 container mx-auto">
+                <Subtitle title="Brand Pilihan" />
+            </div>
+            <div className="gap-4 grid grid-cols-6 container mx-auto">
+                {brands.map((brand) => (
+                    <img
+                        key={brand.id}
+                        className="object-contain border border-border border-opacity-20 w-full h-[85px] shadow-sm"
+                        src={brand.image}
+                        alt="brand"
+                    />
+                ))}
+            </div>
+        </>
+    );
 };
 
 export default Brand;
