@@ -6,43 +6,30 @@ import CheckoutCard from '../Components/Body/Product/Checkout-Card';
 import Recomendations from '../Fragments/Books/Recomendations';
 import Others from '../Fragments/Books/Others';
 import useTitle from '../Utils/Hooks/useTitle';
+import CheckoutBar from '../Components/Body/Product/Checkout-Bar';
 
-function ProductDetail() {
+function Product() {
     useTitle('Detail Buku');
     return (
         <>
-            <div className="mb-44 lg:mb-0">
-                <Layout>
-                    <ProductProvider>
+            <Layout>
+                <ProductProvider>
+                    <div>
                         <div>
-                            <div className="container mx-auto flex-row gap-10 lg:gap-2 hidden md:flex">
-                                <div className="w-1/3 mt-40 lg:mt-36">
-                                    <ImageCard />
-                                </div>
-                                <div className="w-2/3 mt-40 lg:-ml-12">
-                                    <BookDetail />
-                                </div>
-                                <div className="w-1/3 mt-40 hidden lg:block">
-                                    <CheckoutCard />
-                                </div>
-                            </div>
-                            <div className="container mt-40 mx-auto md:hidden">
+                            <div className="container mx-auto px-2 mt-36 flex flex-col md:flex-row md:justify-around gap-6 md:gap-4">
                                 <ImageCard />
-                            </div>
-                            <div className="container mx-auto py-4 md:hidden">
                                 <BookDetail />
-                            </div>
-                            <div className="lg:hidden">
                                 <CheckoutCard />
                             </div>
+                            <CheckoutBar />
                         </div>
-                        <Recomendations background={'bg-cards_wrapper rounded-xl'} />
+                        <Recomendations />
                         <Others />
-                    </ProductProvider>
-                </Layout>
-            </div>
+                    </div>
+                </ProductProvider>
+            </Layout>
         </>
     );
 }
 
-export default ProductDetail;
+export default Product;

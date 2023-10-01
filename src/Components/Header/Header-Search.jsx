@@ -1,4 +1,6 @@
-function SearchBar() {
+import propTypes from 'prop-types';
+
+function SearchBar({ value }) {
     return (
         <div className="justify-center">
             <form>
@@ -26,6 +28,7 @@ function SearchBar() {
                     <input
                         type="search"
                         id="default-search"
+                        defaultValue={value}
                         className="w-full p-3 pl-10 text-sm text-border border border-second rounded-full bg-white focus:ring-second focus:border-second"
                         placeholder="Cari Produk, Judul Buku, Penulis"
                         required
@@ -42,4 +45,7 @@ function SearchBar() {
     );
 }
 
+SearchBar.propTypes = {
+    value: propTypes.string,
+};
 export default SearchBar;

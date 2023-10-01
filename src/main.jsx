@@ -9,7 +9,7 @@ import Index from './Pages/Index';
 import Dashboard from './Pages/Dashboard';
 import Checkout from './Pages/Checkout';
 import ProductDetail from './Pages/Product-Detail';
-import Product from './Pages/Product';
+import Search from './Pages/Search';
 
 const router = createBrowserRouter([
     {
@@ -34,8 +34,12 @@ const router = createBrowserRouter([
         element: <Checkout />,
     },
     {
+        path: '/search?',
+        element: <Search />,
+    },
+    {
         path: '/product-detail',
-        element: <Product />,
+        element: <ProductDetail />,
     },
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(

@@ -3,6 +3,7 @@ import { BiSolidMinusCircle } from 'react-icons/bi';
 import { IconContext } from 'react-icons';
 import { useContext } from 'react';
 import ProductContext from '../../../Utils/Context/product-context';
+import { Link } from 'react-router-dom';
 
 function CheckoutBar() {
     const price = 100000;
@@ -58,9 +59,11 @@ function CheckoutBar() {
                             <h4 className="text-second font-semibold">{rupiah(price * quantity)}</h4>
                         </div>
                         <div className="bg-transparent w-1/2 pb-6">
-                            <button className="w-full py-2 text-second font-semibold rounded-full border-2 border-second hover:bg-second hover:text-white transition duration-200 ease-in-out">
-                                Beli Sekarang
-                            </button>
+                            <Link to="/checkout">
+                                <button className="w-full py-2 text-second font-semibold rounded-full border-2 border-second hover:bg-second hover:text-white transition duration-200 ease-in-out">
+                                    Beli Sekarang
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
