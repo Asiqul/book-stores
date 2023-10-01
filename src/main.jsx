@@ -9,6 +9,7 @@ import Index from './Pages/Index';
 import Dashboard from './Pages/Dashboard';
 import Checkout from './Pages/Checkout';
 import ProductDetail from './Pages/Product-Detail';
+import Search from './Pages/Search';
 
 const router = createBrowserRouter([
     {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
     {
         path: '/checkout',
         element: <Checkout />,
+    },
+    {
+        path: '/search?',
+        element: <Search />,
     },
     {
         path: '/product-detail',

@@ -4,16 +4,17 @@ import Author from './Books/Author';
 import Price from './Books/Price';
 import Rating from './Books/Rating';
 
-function Card({ image, alt }) {
+function BookCard({ image, alt }) {
     return (
         <>
-            <a href="/product-detail" className="card h-[21rem] bg-white shadow-sm mx-2 py-2">
-                <div className="max-h-44 min-h-40 2xl:max-h-48 flex justify-center">
-                    <div className="w-32 h-44 bg-border">
-                        <img src={image} alt={alt} className="object-contain" />
-                    </div>
+            <a
+                href="/product-detail"
+                className="py-2 px-2 flex flex-col justify-center items-center bg-white rounded-xl h-[22rem] shadow-md"
+            >
+                <div className="py-4 rounded-xl">
+                    <img src={image} alt={alt} className="object-contain h-44" />
                 </div>
-                <div className="px-3 bottom-3 absolute w-full">
+                <div className="px-3 bottom-3 w-full">
                     <Author author="John Doe" />
                     <Title title="Lorem ipsum dolor sit amet." />
                     <Price price={100000} />
@@ -24,8 +25,8 @@ function Card({ image, alt }) {
     );
 }
 
-Card.propTypes = {
+BookCard.propTypes = {
     image: propTypes.string.isRequired,
     alt: propTypes.string.isRequired,
 };
-export default Card;
+export default BookCard;
