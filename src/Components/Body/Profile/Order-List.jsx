@@ -14,7 +14,7 @@ function OrderList() {
                 <img src={emptyOrder} alt="empty-order" className="max-w-xs"></img>
             </div>
             <div className="mt-10 md:mt-0 md:w-1/2 bg-transparent">
-                <h2 className="text-2xl font-semibold text-center bg-transparent">Kamu belum menambahkan alamat.</h2>
+                <h2 className="text-2xl font-semibold text-center bg-transparent">Kamu belum pernah berbelanja.</h2>
                 <p className="text-center my-4 bg-transparent">
                     Kamu masih belum bisa berbelanja, ayo segera tambahkan alamatmu dan mulai belanja!
                 </p>
