@@ -27,16 +27,15 @@ function Address() {
                         label="Nama Penerima"
                         opt="true"
                     />
+                    <Forms type="text" placeholder="Masukkan Nama Provinsi" id="province" label="Provinsi" opt="true" />
+                    <Forms type="text" placeholder="Masukkan Nama Kabupaten" id="city" label="Kabupaten" opt="true" />
                     <Forms
-                        type="tel"
-                        placeholder="Cth: 08xxxxxxxxx"
-                        id="telephone"
-                        label="No. Handphone"
-                        pattern="[0-9]{12}"
+                        type="text"
+                        placeholder="Masukkan Nama Kecamatan"
+                        id="disrict"
+                        label="Kecamatan"
                         opt="true"
                     />
-                    <Forms type="text" placeholder="Masukkan Nama Provinsi" id="province" label="Provinsi" opt="true" />
-                    <Forms type="text" placeholder="Masukkan Nama Kecamatan" id="city" label="Kecamatan" opt="true" />
                     <Forms type="number" placeholder="Cth: 123456" id="postal-code" label="Kode Pos" opt="true" />
                     <Forms
                         type="text"

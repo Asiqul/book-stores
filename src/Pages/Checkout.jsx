@@ -17,7 +17,7 @@ function Checkout() {
                 <AuthTitle title="Checkout" />
                 <div className="lg:flex gap-8 items-center justify-between py-5  min-h-1/2">
                     <div className="lg:w-8/12">
-                        <StoreCard onClick={() => setIsOpen(!isOpen)} isOpen={isOpen} />
+                        <StoreCard onClick={() => setIsOpen(!isOpen)} />
                         <StoreDetail isOpen={isOpen} />
                     </div>
                     <div className="hidden lg:block lg:w-2/5 lg:relative">
