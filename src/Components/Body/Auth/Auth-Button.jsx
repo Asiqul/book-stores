@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 function AuthButton(props) {
-    const { tag, type } = props;
+    const { tag, type, disabled } = props;
     return (
         <div className="flex flex-col justify-center items-center gap-7 mt-10">
             {tag == 'Masuk' ? (
@@ -28,6 +28,7 @@ function AuthButton(props) {
             )}
             <button
                 type={type}
+                disabled={disabled}
                 className="btn btn-ghost bg-second rounded-full font-heading text-lg font-semibold w-full text-main hover:text-second"
             >
                 {tag}
@@ -62,5 +63,6 @@ function AuthButton(props) {
 AuthButton.propTypes = {
     tag: PropTypes.string,
     type: PropTypes.string,
+    disabled: PropTypes.bool,
 };
 export default AuthButton;

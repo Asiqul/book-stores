@@ -6,9 +6,26 @@ import UserProfile from '../Components/Body/Profile/User-Profile';
 import Layout from '../Fragments/Layout';
 import { ProfileProvider } from '../Utils/Context/profile-context';
 import useTitle from '../Utils/Hooks/useTitle';
+import useAxiosPrivate from '../Utils/Hooks/useAxiosPrivate';
+import { useEffect } from 'react';
+import useAuth from '../Utils/Hooks/useAuth';
 
 function Dashboard() {
     useTitle('Dashboard');
+    const axiosPrivate = useAxiosPrivate();
+    const { auth } = useAuth();
+
+    const getProfile = async () => {
+        const response = await axiosPrivate.get('/api/user/profile', {
+            headers: {
+                Authorization: `Bearer ${auth?.accessToken}`,
+            },
+        });
+        console.log(response);
+    };
+    useEffect(() => {
+        getProfile();
+    }, []);
     return (
         <>
             <Layout>
