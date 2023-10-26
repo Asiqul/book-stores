@@ -7,9 +7,26 @@ import Recomendations from '../Fragments/Books/Recomendations';
 import Others from '../Fragments/Books/Others';
 import useTitle from '../Utils/Hooks/useTitle';
 import CheckoutBar from '../Components/Body/Product/Checkout-Bar';
+import { useSearchParams } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import axios from '../Utils/Sevices/Axios';
 
 function Product() {
     useTitle('Detail Buku');
+    const [query] = useSearchParams();
+    const id = query.get('id');
+    const [book, setBook] = useState([]);
+
+    const getBook = async () => {
+        const response = await axios.get(`/api/books/${id}`);
+        setBook(response.data);
+        console.log(response.data);
+    };
+
+    useEffect(() => {
+        getBook();
+    }, []);
+
     return (
         <>
             <Layout>

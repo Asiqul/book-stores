@@ -1,11 +1,11 @@
 import { useLocation, Navigate, Outlet } from 'react-router-dom';
-import useAuth from '../Hooks/useAuth';
+import Cookies from 'js-cookie';
 
 function RequireAuth() {
-    const { auth } = useAuth();
+    const session = Cookies.get('_bk_sess');
     const location = useLocation();
 
-    return auth?.accessToken ? <Outlet /> : <Navigate to="/login" state={{ from: location }} replace />;
+    return session ? <Outlet /> : <Navigate to="/login" state={{ from: location }} replace />;
 }
 
 export default RequireAuth;

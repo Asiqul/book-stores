@@ -17,7 +17,7 @@ function Forms(props) {
                 {label}
             </label>
             <input
-                className="w-full py-1 mt-1 bg-transparent text-sm"
+                className="w-full py-1 mt-1 bg-transparent text-sm brightness-50"
                 id={id}
                 type={type}
                 value={value}

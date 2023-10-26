@@ -5,7 +5,7 @@ import 'swiper/css/navigation';
 import './Styles/style.css';
 import Card from './Card';
 
-function SwiperCardCategory({ books, children }) {
+function SwiperCardCategory({ listBooks, children }) {
     return (
         <div className="lg:mt-1 h-[370px] py-3 px-2 sm:px-4 md:px-6 bg-transparent bg-opacity-50 -z-10 w-full flex flex-row">
             <div className="bg-transparent rounded-lg mr-5 hidden xl:block">{children}</div>
@@ -45,11 +45,19 @@ function SwiperCardCategory({ books, children }) {
                 }}
                 className="w-full h-full cursor-grab active:cursor-grabbing"
             >
-                {books.map((book, id) => {
-                    const { image } = book;
+                {listBooks?.map((book) => {
+                    const image = book.cover[0].cover;
+                    const author = book.author[0].name;
                     return (
-                        <SwiperSlide className="swiper-slide" key={id}>
-                            <Card image={image} alt="#" />
+                        <SwiperSlide className="swiper-slide" key={book.id}>
+                            <Card
+                                image={image}
+                                alt={book.title}
+                                author={author}
+                                price={book.price}
+                                title={book.title}
+                                rating={book.rating}
+                            />
                         </SwiperSlide>
                     );
                 })}
@@ -59,7 +67,7 @@ function SwiperCardCategory({ books, children }) {
 }
 
 SwiperCardCategory.propTypes = {
-    books: propTypes.array,
+    listBooks: propTypes.array,
     children: propTypes.node,
 };
 export default SwiperCardCategory;

@@ -1,7 +1,8 @@
+import { lazy } from 'react';
 import Login from './Pages/Login';
 import Register from './Pages/Register';
 import ErrorPage from './Pages/404';
-import Index from './Pages/Index';
+const Index = lazy(() => import('./Pages/Index'));
 import Dashboard from './Pages/Dashboard';
 import Checkout from './Pages/Checkout';
 import ProductDetail from './Pages/Product-Detail';

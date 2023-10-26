@@ -6,41 +6,50 @@ import UserProfile from '../Components/Body/Profile/User-Profile';
 import Layout from '../Fragments/Layout';
 import { ProfileProvider } from '../Utils/Context/profile-context';
 import useTitle from '../Utils/Hooks/useTitle';
-import useAxiosPrivate from '../Utils/Hooks/useAxiosPrivate';
-import { useEffect } from 'react';
-import useAuth from '../Utils/Hooks/useAuth';
+import { useEffect, useState } from 'react';
+import { axiosPrivate } from '../Utils/Sevices/Axios';
+import Cookies from 'js-cookie';
 
 function Dashboard() {
     useTitle('Dashboard');
-    const axiosPrivate = useAxiosPrivate();
-    const { auth } = useAuth();
+    const accessToken = Cookies.get('_bk_sess');
+    const [isLoading, setIsLoading] = useState(false);
+    const [profile, setProfile] = useState({});
+    const [address, setAddress] = useState([]);
 
     const getProfile = async () => {
         const response = await axiosPrivate.get('/api/user/profile', {
             headers: {
-                Authorization: `Bearer ${auth?.accessToken}`,
+                Authorization: `Bearer ${accessToken}`,
             },
         });
-        console.log(response);
+        setProfile(response.data.data);
+        setAddress(response.data.data.address);
+        setIsLoading(false);
     };
     useEffect(() => {
+        setIsLoading(true);
         getProfile();
     }, []);
     return (
         <>
             <Layout>
-                <ProfileProvider>
-                    <div className="container mx-auto md:flex md:flex-row-reverse justify-between gap-5 min-h-screen">
-                        <div className="mt-40 md:mt-36 lg:mt-32 md:w-full">
-                            <NavButton />
-                            <UserProfile />
-                            <AddressList />
-                            <OrderList />
+                {isLoading ? (
+                    <div>Loading...</div>
+                ) : (
+                    <ProfileProvider>
+                        <div className="container mx-auto md:flex md:flex-row-reverse justify-between gap-5 min-h-screen">
+                            <div className="mt-40 md:mt-36 lg:mt-32 md:w-full">
+                                <NavButton />
+                                <UserProfile profile={profile} />
+                                <AddressList address={address} />
+                                <OrderList />
+                            </div>
+                            <StickyNav />
                         </div>
-                        <StickyNav />
-                    </div>
-                </ProfileProvider>
-            </Layout>{' '}
+                    </ProfileProvider>
+                )}
+            </Layout>
         </>
     );
 }

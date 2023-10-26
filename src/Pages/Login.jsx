@@ -6,14 +6,13 @@ import AuthTitle from '../Components/Body/Auth/Auth-Title';
 import Header from '../Fragments/Header';
 import useTitle from '../Utils/Hooks/useTitle';
 import { useState } from 'react';
-import useAuth from '../Utils/Hooks/useAuth';
 import { useLocation, useNavigate } from 'react-router-dom';
 import axios from '../Utils/Sevices/Axios';
 import jwtDecode from 'jwt-decode';
+import Cookies from 'js-cookie';
 
 function Login() {
     useTitle('Masuk');
-    const { setAuth } = useAuth();
     const [password, setPassword] = useState('');
     const [email, setEmail] = useState('');
     const [error, setError] = useState('');
@@ -44,7 +43,8 @@ function Login() {
             );
             const accessToken = response?.data.accessToken;
             const decoded = jwtDecode(accessToken);
-            setAuth({ ...decoded, accessToken });
+            Cookies.set('_bk_sess', accessToken, { secure: true, sameSite: 'strict' });
+            Cookies.set('_sess_exp', decoded.exp, { secure: true, sameSite: 'lax' });
             navigate(from, { replace: true });
         } catch (err) {
             setError(err.response.data.message);
